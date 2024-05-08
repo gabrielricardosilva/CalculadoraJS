@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Média</title>
+</head>
+<body>
+
+<h2>Calculadora de Média</h2>
+<form id="salarioForm">
+  <label for="nome1">Nome do Aluno 1:</label><br>
+  <input type="text" id="nome1" name="nome1"><br>
+  <label for="nota1">Nota o Aluno 1:</label><br>
+  <input type="number" id="salario1" name="salario1"><br><br>
+  
+  
+  <label for="salario2">Nota do Aluno</label><br>
+  <input type="number" id="nota2" name="nota2"><br><br>
+  
+  
+  <label for="salario3">Nota do Aluno</label><br>
+  <input type="number" id="nota3" name="nota3"><br><br>
+  
+  
+  <label for="salario4">Nota do Aluno</label><br>
+  <input type="number" id="nota4" name="nota4"><br><br>
+  
+
+  
+  <input type="submit" value="Calcular Média">
+</form> 
+
+<p id="resultado"></p>
+
+<script>
+document.getElementById('salarioForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Obter os valores dos salários
+  var salario1 = parseFloat(document.getElementById('salario1').value);
+  var salario2 = parseFloat(document.getElementById('salario2').value);
+  var salario3 = parseFloat(document.getElementById('salario3').value);
+  var salario4 = parseFloat(document.getElementById('salario4').value);
+
+
+  // Calcular a média dos salários
+  var media = (nota1 + nota2 + nota3 + nota4 ) / 4;
+
+  // Exibir o resultado
+  document.getElementById('resultado').textContent = 'A Nota do Aluno é:' + media.toFixed(2);
+});
+</script>
+
+</body>
+</html>
